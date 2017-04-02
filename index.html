@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - A Pen by  Ben Shippey</title>
+  <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <style>
+      .header {
+  margin-top:30px;
+  margin-bottom:20px;
+}
+
+.aboutImg {
+    border-radius: 100%;
+    float: left;
+    shape-outside:circle();
+    width: 5em;
+    margin-top: 10px;
+    border: 2px solid #c2e5e5;
+    margin: 7px;
+    padding: 4px;
+}
+
+.img {
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:.5rem;
+  margin-bottom:.5rem;
+}
+
+.portImg {
+  border-color:blue;
+  margin:auto;
+  
+}
+
+// Class
+.center-block {
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.img-fluid {
+  max-width:100%;
+}
+
+.innerBox {
+  margin:auto;
+  margin-bottom: 2em;
+  width:100%;
+}
+
+.core {
+  background-color:#f9f9f9;
+  padding-left:2em;
+  padding-right:2em;
+}
+
+h1 {
+  color:#294A3D;
+  color:#3a5b4e;
+  padding-top:1em;
+  padding-bottom:1em;
+}
+
+.core {
+  max-width:1200px;
+  padding-left:2em;
+  padding-right:2em;
+}
+
+.center-block {
+  display:block;
+  margin:auto;
+}
+
+.innerBox p {
+  margin-top:.25em;
+}
+
+.footer {
+  padding-top:1em;
+  padding-bottom:2em;
+}
+
+.contactMe {
+  padding-bottom:5em;
+}
+
+.section {
+  padding-top:5em;
+}
+
+.container-fluid {
+  background-color:white;
+}
+
+.navbar {
+  background-color:white;
+}
+
+/*Colors*/
+
+/*h1 {
+  color:#F9FBFB ;
+}
+
+body {
+  background-color: #3A4A4D
+}
+
+.container-fluid {
+  background-color: #30C9E8;
+}
+
+p {
+  color:#F9FBFB;
+}*/
+
+.fa {
+  padding:.3em .2em 0 .2em;
+  font-size:120%
+}
+
+.color {
+  font-color:red;
+}
+
+section:target {
+  font-color:red;
+}
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+  <div class="container-fluid">
+  <ul class="navbar-nav"> 
+      <li class="nav-item">
+        <a id = "aboutButton" class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a id = "projectButton" class="nav-link" href="#portfolio">My Projects</a>
+      </li>
+      <li class="nav-item">
+        <a id="contactButton" class="nav-link" href="#contactMe">Contact Me</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid core">
+	<div id="about" class="about section">
+    <h1 class="text-center">About</h1>
+		<div class="row">
+			<div class= "aboutDesc col-md-6 col-xs-12">
+				<p>Lorem ipsum dolor sit amet<img class="img-responsive aboutImg" src="https://preview.c9users.io/benws/expressjs/Archives/profilePic.jpg">, consectetur adipiscing elit. Aliquam tincidunt commodo ex id hendrerit. Mauris quis tincidunt lorem. Pellentesque sagittis velit at magna congue lacinia sed nec nibh. Ut cursus feugiat pulvinar. Integer porttitor hendrerit est, dictum auctor diam semper non. Maecenas quis elit nec lectus gravida fermentum.
+				</p>
+			</div>
+      <div class= "aboutDesc col-md-6 col-xs-12">
+				<p>Consectetur adipiscing elit. Aliquam tincidunt commodo ex id hendrerit. Mauris quis tincidunt lorem. Pellentesque sagittis velit at magna congue lacinia sed nec nibh. Ut cursus feugiat pulvinar. Integer porttitor hendrerit est, dictum auctor diam semper non. Maecenas quis elit nec lectus gravida fermentum. 
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="portfolio" class="portfolio section">
+    <h1 class="text-center">My Projects</h1>
+		<div class="row">
+			<div class = "center-block portBox col-xs-12 col-md-6">
+				<div class="innerBox">
+					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<p class="text-center">Project Description</p>
+				</div>
+			</div>
+			<div class = "portBox col-xs-12 col-md-6">
+				<div class="innerBox">
+					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<p class="text-center">Project Description</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class = "portBox col-xs-12 col-md-6">
+				<div class="innerBox">
+					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<p class="text-center">Project Description</p>
+				</div>
+			</div>
+			<div class = "portBox col-xs-12 col-md-6">
+				<div class="innerBox">
+					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<p class="text-center">Project Description</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class = "portBox col-xs-12 col-md-6">
+				<div class="innerBox">
+					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<p class="text-center">Project Description</p>
+				</div>
+			</div>
+			<div class = "portBox col-xs-12 col-md-6">
+				<div class="innerBox" style="margin-bottom:0em;">
+					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<p class="text-center">Project Description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contactMe" class="contactMe section">
+		<h1 class="text-center">Contact Me</h1>
+		<div class="row">
+			<div class= "col-md-6 col-xs-12 contactDesc">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt commodo ex id hendrerit. Mauris quis tincidunt lorem. Pellentesque sagittis velit at magna congue lacinia sed nec nibh. Ut cursus feugiat pulvinar. Integer porttitor hendrerit est, dictum auctor diam semper non. Maecenas quis elit nec lectus gravida fermentum. 
+					</p>
+			</div>
+      <div class = "col-md-6 col-xs-12">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Phone">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleTextarea" placeholder="Brief Message" rows="4"></textarea>
+          </div>
+          <button type="submit" id="formBtn" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+		</div>
+	</div>
+  <hr width="50%">
+  <div class="footer">
+    <div class="row text-center">
+      <div class="col-xs-12 col-md-12">Site Created by Ben Shippey, 2017<br>
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <i class="fa fa-codepen" aria-hidden="true"></i>
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+        </div>
+    </div>
+  </div>
+</div>
+  
+  <script src='https://use.fontawesome.com/168314fca0.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script>
+    $("#aboutButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 1000);
+});
+
+$("#projectButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#portfolio").offset().top
+    }, 1000);
+});
+
+$("#contactButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contactMe").offset().top
+    }, 1000);
+});
+
+$(document).scroll(function myFuction() {
+  if ($(document).scrollTop() >= $("#contactMe").offset().top) {
+   $("#contactButton").addClass("active");
+   $("#projectButton").removeClass("active");
+   $("#aboutButton").removeClass("active");
+   
+  } else if (
+      $(document).scrollTop() > $("#portfolio").offset().top
+      && $(document).scrollTop() < $("#contactMe").offset().top) 
+  {
+      $("#contactButton").removeClass("active");
+      $("#projectButton").addClass("active");
+      $("#aboutButton").removeClass("active");
+  } else if (
+      $(document).scrollTop() > $("#about").offset().top
+      && $(document).scrollTop() < $("#portfolio").offset().top) 
+  {
+      $("#contactButton").removeClass("active");
+      $("#projectButton").removeClass("active");
+      $("#aboutButton").addClass("active");
+  }
+});
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
