@@ -233,15 +233,15 @@ section:target {
 					</p>
 			</div>
       <div class = "col-md-6 col-xs-12">
-        <form>
+        <form action="/submit" method="post" enctype="multipart/form-data">
           <div class="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Phone">
+            <input type="text" class="form-control" id="formGroupExampleInput" name="phone" placeholder="Phone">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email Address">
+            <input type="text" class="form-control" id="formGroupExampleInput2" name="email" placeholder="Email Address">
           </div>
           <div class="form-group">
-            <textarea class="form-control" id="exampleTextarea" placeholder="Brief Message" rows="4"></textarea>
+            <textarea class="form-control" id="exampleTextarea" placeholder="Brief Message" name="message" rows="4"></textarea>
           </div>
           <button type="submit" id="formBtn" class="btn btn-primary">Submit</button>
         </form>
