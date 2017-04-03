@@ -1,3 +1,5 @@
+"use strict";
+
 var express = require('express');
 var path = require('path');
 var multer = require('multer');
@@ -12,10 +14,9 @@ app.post('/submit', upload.array(), function (req, res, next) {
     console.log(req.body.message);
     console.log(req.body.phone);
     console.log(req.body.email);
-    res.end('Thanks for your submission');
     
     //begin nodemailer logic
-    'use strict';
+    
     const nodemailer = require('nodemailer');
     
     // create reusable transporter object using the default SMTP transport
@@ -42,7 +43,9 @@ app.post('/submit', upload.array(), function (req, res, next) {
             return console.log(error);
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
+        
+        res.end('Thanks for your submission');
     });
 })
 
-app.listen(8080);
+app.listen(process.env.PORT);
