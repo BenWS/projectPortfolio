@@ -21,10 +21,10 @@ app.post('/submit', upload.array(), function (req, res, next) {
     
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: process.env.service,
         auth: {
-            user: 'gmail.user@gmail.com',
-            pass: 'yourpass'
+            user: process.env.email,
+            pass: process.env.password
         }
     });
     
