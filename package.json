@@ -1,0 +1,25 @@
+{
+  "name": "projectporfolio",
+  "version": "1.0.0",
+  "description": "A showcase of recent software development work that I've accomplished",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenWS/projectPortfolio.git"
+  },
+  "author": "Ben Shippey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenWS/projectPortfolio/issues"
+  },
+  "homepage": "https://github.com/BenWS/projectPortfolio#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "multer": "^1.3.0",
+    "path": "^0.12.7"
+  }
+}
