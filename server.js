@@ -44,8 +44,8 @@ app.post('/submit', upload.array(), function (req, res, next) {
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
         
-        res.end('Thanks for your submission');
     });
+    res.end('Thanks for your submission');
 })
 
 app.listen(process.env.PORT);
