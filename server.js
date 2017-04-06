@@ -11,9 +11,6 @@ app.get('/*', (req, res) => {
 })
  
 app.post('/submit', upload.array(), function (req, res, next) {
-    console.log(req.body.message);
-    console.log(req.body.phone);
-    console.log(req.body.email);
     
     //begin nodemailer logic
     
@@ -32,7 +29,7 @@ app.post('/submit', upload.array(), function (req, res, next) {
     let mailOptions = {
         from: req.body.email,// sender address
         to: 'shippeyben@gmail.com', // list of receivers
-        subject: 'Submission from Portfolio Site', // Subject line
+        subject: '', // Subject line
         text: req.body.message, // plain text body
         html: '<b>' + req.body.message + '</b></b>' + 'Phone:' + req.body.phone // html body
     };
