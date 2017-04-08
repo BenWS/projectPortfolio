@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -150,28 +150,25 @@ section:target {
 
 <body translate="no" >
 
- <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Project Portfolio</a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse container-fluid text-center" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a id="aboutButton" class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a id="projectButton" class="nav-link" href="#">My Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a id="contactButton" class="nav-link" href="#">Contact Me</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 <div class="container-fluid core">
@@ -271,53 +268,54 @@ section:target {
 </div>
   
 <script src='https://use.fontawesome.com/168314fca0.js'></script>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 
+
 <script>
-    $("#aboutButton").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#about").offset().top
-    }, 1000);
-});
-
-$("#projectButton").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#portfolio").offset().top
-    }, 1000);
-});
-
-$("#contactButton").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#contactMe").offset().top
-    }, 1000);
-});
-
-$(document).scroll(function myFuction() {
-  if ($(document).scrollTop() >= $("#contactMe").offset().top) {
-   $("#contactButton").addClass("active");
-   $("#projectButton").removeClass("active");
-   $("#aboutButton").removeClass("active");
-   
-  } else if (
-      $(document).scrollTop() > $("#portfolio").offset().top
-      && $(document).scrollTop() < $("#contactMe").offset().top) 
-  {
-      $("#contactButton").removeClass("active");
-      $("#projectButton").addClass("active");
-      $("#aboutButton").removeClass("active");
-  } else if (
-      $(document).scrollTop() > $("#about").offset().top
-      && $(document).scrollTop() < $("#portfolio").offset().top) 
-  {
-      $("#contactButton").removeClass("active");
-      $("#projectButton").removeClass("active");
-      $("#aboutButton").addClass("active");
-  }
-});
-  </script>
+  $("#aboutButton").click(function() {
+      $('html, body').animate({
+          scrollTop: $("#about").offset().top
+      }, 1000);
+  });
+  
+  $("#projectButton").click(function() {
+      $('html, body').animate({
+          scrollTop: $("#portfolio").offset().top
+      }, 1000);
+  });
+  
+  $("#contactButton").click(function() {
+      $('html, body').animate({
+          scrollTop: $("#contactMe").offset().top
+      }, 1000);
+  });
+  
+  $(document).scroll(function myFuction() {
+    if ($(document).scrollTop() >= $("#contactMe").offset().top) {
+     $("#contactButton").addClass("active");
+     $("#projectButton").removeClass("active");
+     $("#aboutButton").removeClass("active");
+     
+    } else if (
+        $(document).scrollTop() > $("#portfolio").offset().top
+        && $(document).scrollTop() < $("#contactMe").offset().top) 
+    {
+        $("#contactButton").removeClass("active");
+        $("#projectButton").addClass("active");
+        $("#aboutButton").removeClass("active");
+    } else if (
+        $(document).scrollTop() > $("#about").offset().top
+        && $(document).scrollTop() < $("#portfolio").offset().top) 
+    {
+        $("#contactButton").removeClass("active");
+        $("#projectButton").removeClass("active");
+        $("#aboutButton").addClass("active");
+    }
+  });
+</script>
 
   
   
