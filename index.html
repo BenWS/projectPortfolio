@@ -275,6 +275,11 @@ section:target {
 
 
 <script>
+
+  $(document).load({
+  	$("html, body").scrollTop(500);
+  });
+  
   $("#aboutButton").click(function() {
       $('html, body').animate({
           scrollTop: $("#about").offset().top
