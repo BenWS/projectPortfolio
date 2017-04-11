@@ -249,7 +249,7 @@ section:target {
           <div class="form-group">
             <textarea class="form-control" id="exampleTextarea" placeholder="Brief Message" name="message" rows="4"></textarea>
           </div>
-          <input type="hidden" id="pagePosition" value="0">
+          <input type="hidden" id="pagePosition" name="pagePosition" value="0">
           <button type="submit" id="formBtn" class="btn btn-primary">Submit</button>
         </form>
       </div>
@@ -277,10 +277,10 @@ section:target {
 
 <script>
 
-  var $pagePosition = $("#aboutButton").click(function() {
-      $pagePosition = $(document).scrollTop()
-      return $pagePosition;
-  });
+  $("#aboutButton").click(function() {
+		  $pagePosition = $(document).scrollTop()
+		  $("#formBtn").val($pagePosition)
+	  });
 
   $("#aboutButton").click(function() {
       $('html, body').animate({
