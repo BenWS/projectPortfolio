@@ -17,6 +17,7 @@ app.post('/submit', upload.array(), function (req, res, next) {
     const nodemailer = require('nodemailer');
     
     //testing whether page position has been captured
+    console.log(req.body.pagePosition);
     
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
