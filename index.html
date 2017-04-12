@@ -298,11 +298,14 @@ $document.on('scroll', function(){
   $items.each(function(){
     if(inViewport(this)) {
   		if ($(this).attr('id') == 'about') {
-  			console.log('about');
+  		  $(".nav-link").removeClass("active")
+  			$('#aboutButton').addClass("active");
   		} else if ($(this).attr('id') == 'portfolio') {
-  			console.log('portfolio');
+  			$(".nav-link").removeClass("active")
+  			$('#projectButton').addClass("active");
   		} else if ($(this).attr('id') == 'contact') {
-  			console.log('contact');
+  			$(".nav-link").removeClass("active")
+  			$('#contactButton').addClass("active");
   		}
       return false;
     }
