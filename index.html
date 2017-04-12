@@ -277,20 +277,16 @@ section:target {
 
 <script>
 
-  $("#contactForm").submit(function() {
+  $("#contactForm").submit(function(ev) {
+    ev.preventDefault();
     $pagePosition = $(document).scrollTop();
 		$("#pagePosition").val($pagePosition);
-		return false;
+		this.submit();
   })
 
   $(document).on("load",function () {
   	$("html, body").scrollTop(500);
   });
-
-  $("#formBtn").click(function() {
-		  $pagePosition = $(document).scrollTop()
-		  $("#formBtn").val($pagePosition)
-	  });
 
   $("#aboutButton").click(function() {
       $('html, body').animate({
