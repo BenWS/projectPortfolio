@@ -341,29 +341,6 @@ $document.on('scroll', function(){
           scrollTop: $("#contactMe").offset().top
       }, 1000);
   });
-  
-  $(document).scroll(function myFuction() {
-    if ($(document).scrollTop() >= $("#contactMe").offset().top) {
-     $("#contactButton").addClass("active");
-     $("#projectButton").removeClass("active");
-     $("#aboutButton").removeClass("active");
-     
-    } else if (
-        $(document).scrollTop() > $("#portfolio").offset().top
-        && $(document).scrollTop() < $("#contactMe").offset().top) 
-    {
-        $("#contactButton").removeClass("active");
-        $("#projectButton").addClass("active");
-        $("#aboutButton").removeClass("active");
-    } else if (
-        $(document).scrollTop() > $("#about").offset().top
-        && $(document).scrollTop() < $("#portfolio").offset().top) 
-    {
-        $("#contactButton").removeClass("active");
-        $("#projectButton").removeClass("active");
-        $("#aboutButton").addClass("active");
-    }
-  });
 </script>
 
   
