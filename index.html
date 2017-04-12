@@ -277,6 +277,39 @@ section:target {
 
 <script>
 
+var $items = $('.section')
+var $window = $(window);
+var $document = $(document);
+
+
+
+function inViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.bottom > 0 &&
+    rect.right > 0 &&
+    rect.left < $window.width() &&
+    rect.top < $window.height()
+  );
+};
+
+//testing to see whether function picks up on the page location
+$document.on('scroll', function(){
+  $items.each(function(){
+    if(inViewport(this)) {
+  		if ($(this).attr('id') == 'about') {
+  			console.log('about');
+  		} else if ($(this).attr('id') == 'portfolio') {
+  			console.log('about');
+  		} else if ($(this).attr('id') == 'contact') {
+  			console.log('about');
+  		}
+      return false;
+    }
+  })
+}).trigger('scroll');
+  
+  
   $("#contactForm").submit(function(ev) {
     ev.preventDefault();
     $pagePosition = $(document).scrollTop();
