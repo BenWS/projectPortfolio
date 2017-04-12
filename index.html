@@ -239,7 +239,7 @@ section:target {
 					</p>
 			</div>
       <div class = "col-md-6 col-xs-12">
-        <form action="/submit" method="post" enctype="multipart/form-data">
+        <form id="contactForm" action="/submit" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <input type="text" class="form-control" id="formGroupExampleInput" name="phone" placeholder="Phone">
           </div>
@@ -277,7 +277,7 @@ section:target {
 
 <script>
 
-  $("#formBtn").submit(function() {
+  $("#contactForm").submit(function() {
     $pagePosition = $(document).scrollTop();
 		$("#pagePosition").val($pagePosition);
 		return false;
