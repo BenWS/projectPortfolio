@@ -95,7 +95,7 @@ h1 {
 }
 
 .contactMe {
-  padding-bottom:5em;
+  padding-bottom:11em;
 }
 
 .section {
@@ -293,7 +293,6 @@ function inViewport(el) {
   );
 };
 
-//testing to see whether function picks up on the page location
 $document.on('scroll', function(){
   $items.each(function(){
     if(inViewport(this)) {
@@ -303,7 +302,7 @@ $document.on('scroll', function(){
   		} else if ($(this).attr('id') == 'portfolio') {
   			$(".nav-link").removeClass("active")
   			$('#projectButton').addClass("active");
-  		} else if ($(this).attr('id') == 'contact') {
+  		} else if ($(this).attr('id') == 'contactMe') {
   			$(".nav-link").removeClass("active")
   			$('#contactButton').addClass("active");
   		}
@@ -338,7 +337,7 @@ $document.on('scroll', function(){
   
   $("#contactButton").click(function() {
       $('html, body').animate({
-          scrollTop: $("#contactMe").offset().top
+          scrollTop: $("#contactMe").offset().top + 10
       }, 1000);
   });
 </script>
