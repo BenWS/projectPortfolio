@@ -176,7 +176,7 @@ section:target {
     <h1 class="text-center">About</h1>
 		<div class="row">
 			<div class= "aboutDesc col-md-6 col-xs-12">
-				<p>Lorem ipsum dolor sit amet<img class="img-responsive aboutImg" src="https://preview.c9users.io/benws/expressjs/Archives/profilePic.jpg">, consectetur adipiscing elit. Aliquam tincidunt commodo ex id hendrerit. Mauris quis tincidunt lorem. Pellentesque sagittis velit at magna congue lacinia sed nec nibh. Ut cursus feugiat pulvinar. Integer porttitor hendrerit est, dictum auctor diam semper non. Maecenas quis elit nec lectus gravida fermentum.
+				<p>Lorem ipsum dolor sit amet<img class="img-responsive aboutImg" src="https://s3.amazonaws.com/benws-portfolioimages/profilePic.jpg">, consectetur adipiscing elit. Aliquam tincidunt commodo ex id hendrerit. Mauris quis tincidunt lorem. Pellentesque sagittis velit at magna congue lacinia sed nec nibh. Ut cursus feugiat pulvinar. Integer porttitor hendrerit est, dictum auctor diam semper non. Maecenas quis elit nec lectus gravida fermentum.
 				</p>
 			</div>
       <div class= "aboutDesc col-md-6 col-xs-12">
@@ -190,13 +190,13 @@ section:target {
 		<div class="row">
 			<div class = "center-block portBox col-xs-12 col-md-6">
 				<div class="innerBox">
-					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<img class="img-fluid center-block" src="https://s3.amazonaws.com/benws-portfolioimages/YelpInstant.PNG">
 					<p class="text-center">Project Description</p>
 				</div>
 			</div>
 			<div class = "portBox col-xs-12 col-md-6">
 				<div class="innerBox">
-					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<img class="img-fluid center-block" src="https://s3.amazonaws.com/benws-portfolioimages/WeatherForecaster.PNG">
 					<p class="text-center">Project Description</p>
 				</div>
 			</div>
@@ -204,13 +204,13 @@ section:target {
 		<div class="row">
 			<div class = "portBox col-xs-12 col-md-6">
 				<div class="innerBox">
-					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<img class="img-fluid center-block" src="https://s3.amazonaws.com/benws-portfolioimages/URLShortener.PNG">
 					<p class="text-center">Project Description</p>
 				</div>
 			</div>
 			<div class = "portBox col-xs-12 col-md-6">
 				<div class="innerBox">
-					<img class="img-fluid center-block" src="https://preview.c9users.io/benws/expressjs/Archives/placeholder.png">
+					<img class="img-fluid center-block" src="https://s3.amazonaws.com/benws-portfolioimages/ImageAbstraction.PNG">
 					<p class="text-center">Project Description</p>
 				</div>
 			</div>
@@ -277,40 +277,37 @@ section:target {
 
 <script>
 
-var $items = $('.section')
-var $window = $(window);
-var $document = $(document);
-
-
-
-function inViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.bottom > 0 &&
-    rect.right > 0 &&
-    rect.left < $window.width() &&
-    rect.top < $window.height()
-  );
-};
-
-$document.on('scroll', function(){
-  $items.each(function(){
-    if(inViewport(this)) {
-  		if ($(this).attr('id') == 'about') {
-  		  $(".nav-link").removeClass("active")
-  			$('#aboutButton').addClass("active");
-  		} else if ($(this).attr('id') == 'portfolio') {
-  			$(".nav-link").removeClass("active")
-  			$('#projectButton').addClass("active");
-  		} else if ($(this).attr('id') == 'contactMe') {
-  			$(".nav-link").removeClass("active")
-  			$('#contactButton').addClass("active");
-  		}
-      return false;
-    }
-  })
-}).trigger('scroll');
+  var $items = $('.section')
+  var $window = $(window);
+  var $document = $(document);
   
+  function inViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.bottom > 0 &&
+      rect.right > 0 &&
+      rect.left < $window.width() &&
+      rect.top < $window.height()
+    );
+  };
+  
+  $document.on('scroll', function(){
+    $items.each(function(){
+      if(inViewport(this)) {
+    		if ($(this).attr('id') == 'about') {
+    		  $(".nav-link").removeClass("active")
+    			$('#aboutButton').addClass("active");
+    		} else if ($(this).attr('id') == 'portfolio') {
+    			$(".nav-link").removeClass("active")
+    			$('#projectButton').addClass("active");
+    		} else if ($(this).attr('id') == 'contactMe') {
+    			$(".nav-link").removeClass("active")
+    			$('#contactButton').addClass("active");
+    		}
+        return false;
+      }
+    })
+  }).trigger('scroll');
   
   $("#contactForm").submit(function(ev) {
     ev.preventDefault();
@@ -318,10 +315,6 @@ $document.on('scroll', function(){
 		$("#pagePosition").val($pagePosition);
 		this.submit();
   })
-
-  $(document).on("load",function () {
-  	$("html, body").scrollTop(500);
-  });
 
   $("#aboutButton").click(function() {
       $('html, body').animate({
