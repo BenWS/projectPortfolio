@@ -9,135 +9,161 @@
   
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
-
-      <style>
-      .header {
-  margin-top:30px;
-  margin-bottom:20px;
-}
-
-.aboutImg {
-    border-radius: 100%;
-    float: left;
-    shape-outside:circle();
-    width: 5em;
-    margin-top: 10px;
-    border: 2px solid;
-    margin: 7px;
-    padding: 4px;
-}
-
-.img {
-  display:block;
-  margin-right:auto;
-  margin-left:auto;
-  margin-top:.5rem;
-  margin-bottom:.5rem;
-}
-
-.portImg {
-  border-style:solid;
-  border-color:rgba(0,0,0,.5);
-  border-radius:.25em;
-  border-width:1px;
+  <link rel='stylesheet prefetch' href='/style.css'>
   
-}
-
-// Class
-.center-block {
-  display:block;
-  margin-right:auto;
-  margin-left:auto;
-}
-
-.img-fluid {
-  max-width:100%;
-}
-
-.innerBox {
-  margin:auto;
-  margin-bottom: 2em;
-  width:100%;
-}
-
-.core {
-  background-color:#f9f9f9;
-  padding-left:2em;
-  padding-right:2em;
-}
-
-h1 {
-  color:#555;
-  padding-top:1em;
-  padding-bottom:1em;
-}
-
-.core {
-  max-width:1200px;
-  padding-left:2em;
-  padding-right:2em;
-}
-
-.center-block {
-  display:block;
-  margin:auto;
-}
-
-.innerBox p {
-  margin-top:.25em;
-}
-
-.footer {
-  padding-top:1em;
-  padding-bottom:2em;
-}
-
-.contactMe {
-  padding-bottom:11em;
-}
-
-.section {
-  padding-top:5em;
-}
-
-.container-fluid {
-  background-color:white;
-}
-
-.navbar {
-  background-color:white;
-}
-
-/*Colors*/
-
-/*h1 {
-  color:#F9FBFB ;
-}
-
-body {
-  background-color: #3A4A4D
-}
-
-.container-fluid {
-  background-color: #30C9E8;
-}
-
-p {
-  color:#F9FBFB;
-}*/
-
-.fa {
-  padding:.3em .2em 0 .2em;
-  font-size:120%
-}
-
-.color {
-  font-color:red;
-}
-
-section:target {
-  font-color:red;
-}
+  <style>
+        
+      .header {
+        margin-top:30px;
+        margin-bottom:20px;
+      }
+      
+      .aboutImg {
+          border-radius: 100%;
+          float: left;
+          shape-outside:circle();
+          width: 5em;
+          margin-top: 10px;
+          border: 2px solid;
+          margin: 7px;
+          padding: 4px;
+      }
+      
+      .img {
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+        margin-top:.5rem;
+        margin-bottom:.5rem;
+      }
+      
+      .portImg {
+        border-style:solid;
+        border-color:rgba(0,0,0,.5);
+        border-radius:.25em;
+        border-width:1px;
+        
+      }
+      
+      // Class
+      .center-block {
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+      }
+      
+      .img-fluid {
+        max-width:100%;
+      }
+      
+      .innerBox {
+        margin:auto;
+        margin-bottom: 2em;
+        width:100%;
+      }
+      
+      .core {
+        background-color:#f9f9f9;
+        padding-left:2em;
+        padding-right:2em;
+      }
+      
+      h1 {
+        color:#555;
+        padding-top:1em;
+        padding-bottom:1em;
+      }
+      
+      .core {
+        max-width:1200px;
+        padding-left:2em;
+        padding-right:2em;
+      }
+      
+      .center-block {
+        display:block;
+        margin:auto;
+      }
+      
+      .innerBox p {
+        margin-top:.25em;
+      }
+      
+      .footer {
+        padding-top:1em;
+        padding-bottom:2em;
+      }
+      
+      .contactMe {
+        padding-bottom:11em;
+      }
+      
+      .section {
+        padding-top:5em;
+      }
+      
+      .container-fluid {
+        background-color:white;
+      }
+      /****Colors****/
+      
+      /**Color Palette
+      
+      Base: #30c9e8
+      Accent: FF4430
+      Neutral #1:  #3A4A4D Dark Blue
+      Neutral #2: #F9FBFB Gray
+      White: #ffffff
+      
+      **/
+      
+      /*background*/
+      
+      
+      body {
+        background-color: #f9fbfb;
+      }
+      
+      .container-fluid {
+        background-color: #f9fbfb;
+      }
+      
+      nav, .navbar-collapse {
+        background-color: #f9fbfb !important;
+      }
+      
+      /*text*/
+      h1 {
+        color:#30c9e8 !important;
+      }
+      
+      a.navbar-brand {
+        color:#30c9e8 !important;
+      }
+      
+      
+      p, div.innerBox, div#navbarSupportedContent {
+        color:#3A4A4D !important;
+      }
+      
+      .btn-primary:hover {
+        color: #fff;
+        background-color: #ff1a03;
+        border-color: #ff1a03;
+      } 
+      
+      .btn-primary {
+        color: #fff;
+        background-color: #FF4430;
+        border-color: #FF4430;
+      }
+      
+      /*****End Colors****/
+      
+      .fa {
+        padding:.3em .2em 0 .2em;
+        font-size:120%
+      }
     </style>
 
   
@@ -227,6 +253,7 @@ section:target {
 				</div>
 			</div>
 		</div>
+	</div>
 	<div id="contactMe" class="contactMe section">
 		<h1 class="text-center">Contact Me</h1>
 		<div class="row">
@@ -277,7 +304,7 @@ section:target {
   var $items = $('.section')
   var $window = $(window);
   var $document = $(document);
-  
+    
   function inViewport(el) {
     var rect = el.getBoundingClientRect();
     return (
@@ -336,7 +363,7 @@ section:target {
   
   $("#contactButton").click(function() {
       $('html, body').animate({
-          scrollTop: $("#contactMe").offset().top + 10
+          scrollTop: $("#contactMe").offset().top + 2
       }, 1000);
   });
 </script>
