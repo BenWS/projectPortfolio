@@ -51,8 +51,6 @@
         padding-left:2em;
         padding-right:2em;
         max-width:1200px;
-        padding-left:2em;
-        padding-right:2em;
       }
       
       /*targeting each of the section headers*/
@@ -67,9 +65,15 @@
       }
       
             
+      /*style for footer icons*/
       .fa {
         padding:.3em .2em 0 .2em;
         font-size:120%
+      }
+      
+      /*bolding the navbar title text a little*/
+      .navbar-brand {
+        font-weight:500;
       }
       
       /****Colors****/
@@ -100,12 +104,8 @@
         color:#30c9e8;
       }
       
-      p, div.innerBox, li.nav-item {
-        color:#3A4A4D !important;
-      }
-      
-      a.navbar-brand {
-        font-weight:500;
+      p {
+        color:#3A4A4D;
       }
       
       .btn-primary:hover {
@@ -258,6 +258,8 @@
 
 
 <script>
+
+/*global $*/
 
   var $items = $('.section')
   var $window = $(window);
