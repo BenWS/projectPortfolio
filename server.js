@@ -32,9 +32,9 @@ app.post('/submit', upload.array(), function (req, res, next) {
     let mailOptions = {
         from: req.body.email,// sender address
         to: 'shippeyben@gmail.com', // list of receivers
-        subject: '', // Subject line
+        subject: 'New Project Portfolio Form Submission', // Subject line
         text: req.body.message, // plain text body
-        html: '<b>' + req.body.message + '</b></b>' + 'Phone:' + req.body.phone // html body
+        html: '<b>Message:</b> ' + req.body.message + '<br>' + '<b>Phone:</b>' + req.body.phone // html body
     };
     
     // send mail with defined transport object
