@@ -3,6 +3,7 @@
 var express = require('express');
 var path = require('path');
 var multer = require('multer');
+var mongo = require('mongodb').MongoClient;
 var upload = multer();
 var app = express();
 
@@ -12,9 +13,16 @@ app.get('/*', (req, res) => {
  
 app.post('/submit', upload.array(), function (req, res, next) {
     
-    //begin nodemailer logic
     
-    const nodemailer = require('nodemailer');
+    //database connectivity
+    mongo.connect(process.env.MONGOLAB_CHARCOAL_URI, function (err, db) {
+		var submitColl = db.collection('submit');
+		submitColl.insert({'phone':req.body.phone, 'email':req.body.email, 'message':req.body.message})
+		db.close();
+	}
+    
+    //begin nodemailer logic
+        const nodemailer = require('nodemailer');
     
     //testing whether page position has been captured
     console.log(req.body.pagePosition);
