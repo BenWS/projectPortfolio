@@ -19,7 +19,7 @@ app.post('/submit', upload.array(), function (req, res, next) {
 		var submitColl = db.collection('submit');
 		submitColl.insert({'phone':req.body.phone, 'email':req.body.email, 'message':req.body.message})
 		db.close();
-	}
+	});
     
     //begin nodemailer logic
         const nodemailer = require('nodemailer');
