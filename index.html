@@ -77,47 +77,46 @@
       }
       
       /****Colors****/
-      
-      /**Color Palette
-      
-      Base: #30c9e8
-      Accent: FF4430
-      Neutral #1:  #3A4A4D Dark Blue
-        Neutral #2: #F9FBFB Gray
-      White: #ffffff
-      
-      **/
+	  
+	  :root {
+  		--base-color: #226666;
+  		--accent-color: #7A9F35;
+  		--accent-color-highlight: #88cb0b;
+  		--neutral-color1:#0e2525;
+  		--neutral-color2:#aaa;
+  		--white:#fff;
+	  }
       
       /*background*/
       
       
       body {
-        background-color: #ffffff;
+        background-color: var(--white);
       }
       
       .container-fluid {
-        background-color: #ffffff;
+        background-color: var(--white);
       }
       
      /*text*/
       .sectionHeader {
-        color:#30c9e8;
+        color:var(--base-color);
       }
       
       p {
-        color:#3A4A4D;
+        color:var(--neutral-color1);
       }
       
       .btn-primary:hover {
-        color: #fff;
-        background-color: #ff1a03;
-        border-color: #ff1a03;
+        color: var(--white);
+        background-color: var(--accent-color-highlight);
+        border-color: var(--accent-color-highlight);
       } 
       
       .btn-primary {
-        color: #fff;
-        background-color: #FF4430;
-        border-color: #FF4430;
+        color: var(--white);
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
       }
       
       /*****End Colors****/
@@ -132,12 +131,12 @@
 <body translate="no" >
 
 
-<nav class="navbar navbar-inverse fixed-top navbar-toggleable-md navbar-light bg-faded" style="background-color:#3A4A4D;">
+<nav class="navbar navbar-inverse fixed-top navbar-toggleable-md navbar-light bg-faded" style="background-color:var(--neutral-color1);">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="#">Ben Shippey</a>
-  <div class="collapse navbar-collapse mr-auto" id="navbarSupportedContent" style="background-color:#3A4A4D;">
+  <div class="collapse navbar-collapse mr-auto" id="navbarSupportedContent" style="background-color:var(--neutral-color1);">
      <ul class="navbar-nav ">
       <li class="nav-item">
         <a id="aboutButton" class="nav-link active" data-target=".navbar-collapse.show" href="#navbarSupportedContent" data-toggle="collapse">About</a>
@@ -240,10 +239,10 @@
     <div class="row text-center">
       <div class="col-xs-12 col-md-12">
           <p>Created by Ben Shippey, 2017<br>
-            <a href="https://www.linkedin.com/in/benjaminshippey/"><i class="fa fa-linkedin" style="color:#3A4A4D" aria-hidden="true"></i></a>
-            <a href="http://codepen.io/BenWS/"><i class="fa fa-codepen" style="color:#3A4A4D" aria-hidden="true"></i></a>
-            <a href="https://github.com/BenWS"><i class="fa fa-github" style="color:#3A4A4D" aria-hidden="true"></i></a>
-            <a href="http://stackoverflow.com/users/3633149/benws"><i class="fa fa-stack-overflow" style="color:#3A4A4D" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/benjaminshippey/"><i class="fa fa-linkedin" style="color:var(--neutral-color1)" aria-hidden="true"></i></a>
+            <a href="http://codepen.io/BenWS/"><i class="fa fa-codepen" style="color:var(--neutral-color1)" aria-hidden="true"></i></a>
+            <a href="https://github.com/BenWS"><i class="fa fa-github" style="color:var(--neutral-color1)" aria-hidden="true"></i></a>
+            <a href="http://stackoverflow.com/users/3633149/benws"><i class="fa fa-stack-overflow" style="color:var(--neutral-color1)" aria-hidden="true"></i></a>
           </p>
         </div>
     </div>
