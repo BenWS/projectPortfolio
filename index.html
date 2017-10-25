@@ -6,11 +6,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
-  
-  
+
+
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='/style.css'>
-  
+
   <style>
       /*Profile Picture Image in About Section*/
       .aboutImg {
@@ -23,7 +23,7 @@
           margin: 7px;
           padding: 4px;
       }
-      
+
       /*For portfolio section images*/
       .portImg {
         border-style:solid;
@@ -31,105 +31,104 @@
         border-radius:.25em;
         border-width:1px;
         max-width:100%;
-        
+
       }
-      
+
       /*.innerBox is the class of div that contains the portfolio image and its caption text*/
       .innerBox {
         margin:auto;
         margin-bottom: 1em;
         width:100%;
       }
-      
+
       .innerBox p {
         margin-top:.25em;
       }
-      
+
       /*targeting the container-fluid class that is NOT the navbar*/
       .core {
-        background-color:#f9f9f9;
         padding-left:2em;
         padding-right:2em;
         max-width:1200px;
       }
-      
+
+      body {
+        background: -webkit-linear-gradient(-45deg, var(--faded-accent), var(--white)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(-45deg, var(--faded-accent), var(--white)); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(-45deg, var(--faded-accent), var(--white)); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(-45deg, var(--faded-accent), var(--white)); /* Standard syntax */
+      }
+
       /*targeting each of the section headers*/
       .sectionHeader {
         padding-top:.75em;
         padding-bottom:.75em;
       }
-      
+
       /*targeting each section; is padding the appropriate CSS property?*/
       .section {
         padding-top:3rem;
       }
-      
-            
+
+
       /*style for footer icons*/
       .fa {
         padding:.3em .2em 0 .2em;
         font-size:120%
       }
-      
+
       /*bolding the navbar title text a little*/
       .navbar-brand {
         font-weight:500;
       }
-      
+
       /****Colors****/
-	  
+
 	  :root {
   		--base-color: #226666;
   		--accent-color: #7A9F35;
   		--accent-color-highlight: #88cb0b;
   		--neutral-color1:#0e2525;
-  		--neutral-color2:#aaa;
+  		--neutral-color2:#ccc;
+      --faded-base:#c7eaea;
+      --faded-accent: #f4f9ec;
   		--white:#fff;
 	  }
-      
+
       /*background*/
-      
-      
-      body {
-        background-color: var(--white);
-      }
-      
-      .container-fluid {
-        background-color: var(--white);
-      }
-      
+
      /*text*/
       .sectionHeader {
         color:var(--base-color);
       }
-      
+
       p {
         color:var(--neutral-color1);
       }
-      
+
       .aboutImg{
         border-color:var(--neutral-color1);
       }
-      
+
       .btn-primary:hover {
         color: var(--white);
         background-color: var(--accent-color-highlight);
         border-color: var(--accent-color-highlight);
-      } 
-      
+      }
+
       .btn-primary {
         color: var(--white);
         background-color: var(--accent-color);
         border-color: var(--accent-color);
       }
-      
+
       /*****End Colors****/
     </style>
 
-  
-  
-  
-  
+
+
+
+
 </head>
 
 <body translate="no" >
@@ -163,7 +162,7 @@
 				</p>
 			</div>
       <div class= "aboutDesc col-md-6 col-xs-12">
-				<p>I do have a preference for back-end development. I guess if I was charged with the task of building a car, I would rather work on the engine as opposed to the aesthetics &mdash; not to say one is more important than the other. When not building software I enjoy running, playing acoustic guitar, and hiking in the Appalachians north of town. Enjoy the website! 
+				<p>I do have a preference for back-end development. I guess if I was charged with the task of building a car, I would rather work on the engine as opposed to the aesthetics &mdash; not to say one is more important than the other. When not building software I enjoy running, playing acoustic guitar, and hiking in the Appalachians north of town. Enjoy the website!
 				</p>
 			</div>
 		</div>
@@ -252,7 +251,7 @@
     </div>
   </div>
 </div>
-  
+
 <script src='https://use.fontawesome.com/168314fca0.js'></script>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -267,7 +266,7 @@
   var $items = $('.section')
   var $window = $(window);
   var $document = $(document);
-    
+
   function inViewport(el) {
     var rect = el.getBoundingClientRect();
     return (
@@ -277,11 +276,11 @@
       rect.top < $window.height()
     );
   };
-  
+
   $document.on('scroll', function(){
     $items.each(function(){
       if(inViewport(this)) {
-        
+
         //check to see which section page is focused on
     		if ($(this).attr('id') == 'about') {
     		  $(".nav-link").removeClass("active")
@@ -292,19 +291,19 @@
     		} else if ($(this).attr('id') == 'contactMe') {
     			$(".nav-link").removeClass("active")
     			$('#contactButton').addClass("active");
-    		} 
-    		
+    		}
+
     		//check to see if screen is at bottom of the page
     		if ($(document).height() == $(window).scrollTop() + $(window).height()) {
     		    $(".nav-link").removeClass("active");
     			  $('#contactButton').addClass("active");
     		}
-    		
+
         return false;
       }
     })
   }).trigger('scroll');
-  
+
   $("#contactForm").submit(function(ev) {
     ev.preventDefault();
     $pagePosition = $(document).scrollTop();
@@ -317,13 +316,13 @@
           scrollTop: $("#about").offset().top
       }, 1000);
   });
-  
+
   $("#projectButton").click(function() {
       $('html, body').animate({
           scrollTop: $("#portfolio").offset().top
       }, 1000);
   });
-  
+
   $("#contactButton").click(function() {
       $('html, body').animate({
           scrollTop: $("#contactMe").offset().top + 2
@@ -331,9 +330,8 @@
   });
 </script>
 
-  
-  
+
+
 
 </body>
 </html>
- 
